@@ -1,37 +1,28 @@
 Build your own Lisp
 ===================
 
-http://buildyourownlisp.com
+Jekyllized: https://dougbeney.github.io/BuildYourOwnLisp-Jekyllized/
+Original: http://buildyourownlisp.com
 
 About
 -----
 
-This is the HTML and website code for the book of the above title.
-
-Corrections / Edits / Contributions Welcome
-
-`contact@theorangeduck.com`
-
-Licensed under Creative Commons Attribution-NonCommercial-ShareAlike 3.0
-
-http://creativecommons.org/licenses/by-nc-sa/3.0/
-
+This is a fork of BuildYourOwnLisp that uses Jekyll/static HTML instead of Python/Flask.
 
 Running
 -------
 
-You can't just browse the raw HTML files of the site. The links wont work, and it wont have a proper header or footer. If you want to run this website locally, you should install Flask and run the website as follows.
+First, succesfully install [Jekyll/Bundler](https://jekyllrb.com/) (You'll need Ruby too).
+
+Next, simply type `jekyll serve`.
+
+Go to [localhost:4000](http://localhost:4000) and you should see the site! Great job.
+
+Deploying to GH-Pages
+-------
+
+After building the project using either `jekyll build` or `jekyll serve`, deploy to the gh-pages branch using the following command:
 
 ```
-pip install Flask
-pip install Flask-Mail
-python lispy.py
+git subtree push --prefix dist origin gh-pages
 ```
-
-You can specify port via `$PORT`.
-
-```
-env PORT=5000 python lispy.py
-```
-
-This will serve the site locally at `http://127.0.0.1:5000/`. You can browse it from there.
